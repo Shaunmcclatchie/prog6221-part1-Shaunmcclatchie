@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shaun\\source\\repos\\ChatBot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06159FD0-1CE8-4FEA-B2B7-FC698F0F6BA1}|ChatBot\\ChatBot.csproj|C:\\Users\\shaun\\source\\repos\\ChatBot\\chatbot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06159FD0-1CE8-4FEA-B2B7-FC698F0F6BA1}|ChatBot\\ChatBot.csproj|solutionrelative:chatbot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06159FD0-1CE8-4FEA-B2B7-FC698F0F6BA1}|ChatBot\\ChatBot.csproj|c:\\users\\shaun\\source\\repos\\chatbot\\chatbot\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06159FD0-1CE8-4FEA-B2B7-FC698F0F6BA1}|ChatBot\\ChatBot.csproj|solutionrelative:chatbot\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Quiz.cs",
+              "DocumentMoniker": "C:\\Users\\shaun\\source\\repos\\ChatBot\\ChatBot\\Quiz.cs",
+              "RelativeDocumentMoniker": "ChatBot\\Quiz.cs",
+              "ToolTip": "C:\\Users\\shaun\\source\\repos\\ChatBot\\ChatBot\\Quiz.cs",
+              "RelativeToolTip": "ChatBot\\Quiz.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T11:24:27.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\shaun\\source\\repos\\ChatBot\\ChatBot\\Program.cs",
+              "RelativeDocumentMoniker": "ChatBot\\Program.cs",
+              "ToolTip": "C:\\Users\\shaun\\source\\repos\\ChatBot\\ChatBot\\Program.cs",
+              "RelativeToolTip": "ChatBot\\Program.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwC4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T11:23:22.772Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
