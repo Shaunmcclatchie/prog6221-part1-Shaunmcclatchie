@@ -1,0 +1,45 @@
+name: .NET Framework Console CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        configuration: [ Debug, Release ]
+
+    env:
+      # Change this to your real solution filename
+      SOLUTION_NAME: CyberSecurityChatBot.sln
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore ${{ env.SOLUTION_NAME }}
+
+      - name: Build solution
+        run: msbuild ${{ env.SOLUTION_NAME }} /p:Configuration=${{ matrix.configuration }}
+
+      # If you have a separate test project, uncomment and set its path:
+      #- name: Run unit tests
+      #  run: msbuild ${{ env.SOLUTION_NAME }} /t:Test /p:Configuration=${{ matrix.configuration }}
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: BuildOutputs-${{ matrix.configuration }}
+          path: |
+            **/bin/${{ matrix.configuration }}/*
