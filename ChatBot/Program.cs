@@ -144,8 +144,8 @@ namespace ChatBot
                 if (userInput.Equals("exit", StringComparison.OrdinalIgnoreCase))
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    TypeWriteLine("Goodbye! thanks for chatting, Stay safe and secure, always remember your tips.", TypingDelay);
-                    Console.ResetColor();
+                    TypeWriteLine("Goodbye! thanks for chatting, I really enjoyed chatting with you, Stay safe and secure, always remember your tips.", TypingDelay);
+                    Console.ResetColor(); 
                     break;
                 }
 
@@ -163,33 +163,58 @@ namespace ChatBot
         }
 
        
-        //
+        // deals with all user input and what to return to the user
         static void ProcessQuery(string query)
         {
             string lower = query.ToLower();
+
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(new string('-', 80));
             Console.ResetColor();
 
-            // if statments to process users input and approirate responses
-
             if (lower.Contains("how are you"))
-                Respond("I'm doing great thanks for asking, I hope you too are great! I am here to provide cybersecurity tips, guidance, and even a quiz!");
+                Respond("I'm doing great, thank you for asking!I am Herefor you to provide cybersecurity tips, guidance, and a quiz to test you!");
             else if (lower.Contains("what's your purpose") || lower.Contains("your purpose"))
-                Respond("My purpose is to assist you with cybersecurity concerns, share tips on password safety, phishing, safe browsing, and test your knowledge with a quiz, " +
-                    "after our conversation you will have all the tips you need!.");
+                Respond("My purpose is to make you feel safer online, you can ask me many questions and I happy to help where I can.");
             else if (lower.Contains("what can i ask you"))
-                Respond("You can ask me about:\n - Password Safety\n - Phishing\n - Safe Browsing\n - Quiz (type 'quiz'), this quiz will test your knowledge");
+                Respond("You can ask me about:\n" +
+                        " - Password Safety\n" +
+                        " - Phishing\n" +
+                        " - Safe Browsing\n" +
+                        " - Two-Factor Authentication\n" +
+                        " - Encryption Basics\n" +
+                        " - VPN Usage\n" +
+                        " - Malware Prevention\n" +
+                        " - Social Engineering\n" +
+                        " - Patch Management\n" +
+                        " - Secure Coding\n" +
+                        " - Quiz (type 'quiz')");
             else if (lower.Contains("password safety"))
-                Respond("Use a mix of uppercase, lowercase, numbers, and symbols. Avoid common words" +
-                    "also avoid pet names, birthdays and family names, these are easy to guess making you vunerable.");
+                Respond("Password Safety: Use a mix of upper/lowercase, digits, and symbols; avoid reuse; consider a password manager" +
+                    "this creates and stores more complex passwords for you.");
             else if (lower.Contains("phishing"))
-                Respond("Always verify sender addresses and NEVVER clicking on unknown links" +
-                    "if the link looks fishy or different to normal rather be safe.");
+                Respond("Phishing: Verify sender addresses, hover before clicking ensure its who you think, and never share credentials via email.");
             else if (lower.Contains("safe browsing"))
-                Respond("Keep software updated, use HTTPS, an encrtyped and secure browsing method, and be mindful of your data.");
+                Respond("Safe Browsing: Stick to HTTPS sites, HTTPS is a secure connection, keep your browser updated, and avoid suspicious downloads.");
+            else if (lower.Contains("two-factor") || lower.Contains("2fa"))
+                Respond("Two-Factor Authentication: Adds a second verification step (SMS, app code, hardware token) to secure your accounts" +
+                    "this will make sure no one can acess your acc without your knowledge.");
+            else if (lower.Contains("encryption"))
+                Respond("Encryption Basics: Protects data by converting it into unreadable ciphertext—ensure end-to-end or disk encryption as needed.");
+            else if (lower.Contains("vpn"))
+                Respond("VPN Usage: Encrypts your internet traffic and masks your IP—use a trusted VPN provider on public Wi-Fi.");
+            else if (lower.Contains("malware"))
+                Respond("Malware Prevention: Keep antivirus updated, avoid untrusted attachments, and scan downloads before opening" +
+                    "make sure you have a anti-virus software that runs frequent scans of your machine.");
+            else if (lower.Contains("social engineering"))
+                Respond("Social Engineering: Attackers manipulate you into revealing info—stay skeptical of unsolicited requests and verify identities" +
+                    "never share passwords, and if unsure, no matter what verify details.");
+            else if (lower.Contains("patch") || lower.Contains("update"))
+                Respond("Patch Management: Regularly install OS and software updates to fix security vulnerabilities.");
+            else if (lower.Contains("secure coding"))
+                Respond("Secure Coding: Validate input, use parameterized queries, and handle errors safely to prevent injections and leaks.");
             else if (lower.Contains("quiz"))
-                ChatBot.Quiz.StartQuiz();    
+                Quiz.StartQuiz();
             else
                 Respond("I didn't quite understand that please rephrase.");
 

@@ -75,7 +75,8 @@ namespace ChatBot
                 else // 4 or 5
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    TypeWriteLine($"\nCongratulations! {score}/5 – you earned a Distinction! Amazing work", TypingDelay);
+                    TypeWriteLine($"\nCongratulations! {score}/5 – you earned a Distinction! Amazing work" +
+                        $"this is a good sign you know your cyber sec - dont forget it and stay safe!", TypingDelay);
                     Console.ResetColor();
                     passed = true;
                 }
