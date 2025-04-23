@@ -188,8 +188,8 @@ namespace ChatBot
                     "if the link looks fishy or different to normal rather be safe.");
             else if (lower.Contains("safe browsing"))
                 Respond("Keep software updated, use HTTPS, an encrtyped and secure browsing method, and be mindful of your data.");
-            else if (lower.Contains("quiz")) ;
-            // ChatBot.Quiz.StartQuiz();    // ← Call to external Quiz class
+            else if (lower.Contains("quiz"))
+                ChatBot.Quiz.StartQuiz();    
             else
                 Respond("I didn't quite understand that please rephrase.");
 
@@ -212,4 +212,5 @@ namespace ChatBot
         #endregion
     }
 }
+
 
